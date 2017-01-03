@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/T4Test/bin/Debug
+/T4Test/obj/Debug
+/Symphony.DtoGenerator.Console/obj
+/Symphony.DtoGenerator.Console/bin
+/T4Test/v14
+/Symphony.DtoGenerator.Console/DtoOutput
+/Symphony.DtoGenerator.Core/obj
+/Symphony.DtoGenerator.Core/bin
+/Symphony.DtoGenerator.Tests/obj
+/Symphony.DtoGenerator.Tests/bin
+/.vs

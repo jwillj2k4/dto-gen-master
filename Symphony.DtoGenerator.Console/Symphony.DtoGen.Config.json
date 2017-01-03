@@ -1,0 +1,63 @@
+﻿{
+
+  //optional
+  "DtoNamespacePrefix": "",
+  //required
+  "DtoNamespaceSuffix": "",
+  //optional
+  "DtoClassPrefix": "",
+  //required
+  "DtoClassSuffix": "Dto",
+  //required
+  "DllInputPath": "C:\\temp\\fakedata.dll",
+  //required
+  "DllOutputDirectory": "C:\\temp\\dtos\\",
+
+  //Example
+  //No Exclusions
+  //"Exclusions": null
+  
+  //Example
+  "Exclusions": [
+    {
+      //remove a root aggregate only
+      "ClassFullName": "FakeData.Domain.Sandwich.Crazy.BaseRootAggregate", //Always Use FullName
+      "IncludeDerivedClasses": "false",
+      "PropertyNames": null,
+      "MethodNames": null,
+      "FieldNames": null
+    },
+
+    {
+      //remove a root aggregate and any derived class
+      "ClassFullName": "FakeData.Models.SurveyRootAggregate", //Always Use FullName
+
+      "IncludeDerivedClasses": "true", //determines for derived classes
+
+      "PropertyNames": null,
+      "MethodNames": null,
+      "FieldNames": null
+    },
+
+    {
+      //remove properties, methods, or fields from Root Aggregate (also derived classes)
+      "ClassFullName": "FakeData.Models.RiskRootAggregate", //Always Use FullName
+
+      "IncludeDerivedClasses": "true", //determines for derived classes
+
+      "PropertyNames": [ "prop1", "prop2", "prop3" ],
+      "MethodNames": [ "Method1", "Method2", "Method3" ],
+      "FieldNames": [ "Field1", "Field2", "Field3" ]
+    },
+
+
+    {
+      //remove properties, methods, or fields from any class (will not work on derived classes)
+      "ClassFullName": "FakeData.Models.SomeClass", //Always Use FullName
+      "IncludeDerivedClasses": null,
+      "PropertyNames": [ "prop1", "prop2", "prop3" ],
+      "MethodNames": [ "Method1", "Method2", "Method3" ],
+      "FieldNames": [ "Field1", "Field2", "Field3" ]
+    }
+  ]
+}
